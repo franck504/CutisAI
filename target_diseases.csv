@@ -1,10 +1,10 @@
 id,common_name_fr,common_name_en,scientific_name,search_keywords,description_visual
-1,Ulcère de Buruli,Buruli Ulcer,Mycobacterium ulcerans,Buruli ulcer lesion|Mycobacterium ulcerans skin ulcer|Buruli nodule,Gros ulcères indolores à bords creusés
-2,Lèpre,Leprosy,Mycobacterium leprae,Leprosy skin lesions|Hansen's disease macules|lepromatous leprosy skin,Taches hypopigmentées ou rougeâtres avec perte de sensation
-3,Leishmaniose cutanée,Cutaneous Leishmaniasis,Leishmania spp.,Cutaneous leishmaniasis ulcer|oriental sore lesion|leishmania skin nodule,Gros boutons ou ulcères (volcans) sur les zones découvertes
-4,Pian,Yaws,Treponema pallidum pertenue,Yaws skin lesions|Treponema pallidum pertenue framboesia|primary yaws papilloma,Lésions en forme de framboise ou grands ulcères (enfants)
-5,Gale,Scabies,Sarcoptes scabiei,Scabies rash|Sarcoptes scabiei skin burrows|scabies crusted,Petits boutons rouges (papules) prurigineux et lésions de grattage
-6,Teigne,Ringworm,Dermatophytosis / Tinea,Tinea corporis lesion|Ringworm skin patch|tinea capitis scalp,Plaques rondes rouges desquamantes à centre clair
-7,Tungose,Tungiasis / Jigger fleas,Tunga penetrans,Tungiasis foot|Jigger flea lesions|Tunga penetrans sole,Petits points noirs/blancs sous la peau ou les ongles des pieds
-8,Eczéma,Atopic dermatitis,Dermatitis,Atopic dermatitis skin|eczema lesions dark skin|eczema erythema,Lésions sèches foncées ou grisâtres avec desquamation
-9,Mpox (Variole du singe),Mpox / Monkeypox,Monkeypox virus,Mpox skin lesions|Monkeypox pustules|monkeypox rash,Éruption cutanée avec vésicules et pustules évoluant en croûtes
+1,Ulcère de Buruli,Buruli Ulcer,Mycobacterium ulcerans,Buruli ulcer lesion|Mycobacterium ulcerans skin ulcer|Buruli nodule|Buruli ulcer dark skin|Buruli ulcer Africa|fery Buruli madagascar,Gros ulcères indolores à bords creusés
+2,Lèpre,Leprosy,Mycobacterium leprae,Leprosy skin lesions|Hansen's disease macules|lepromatous leprosy skin|Leprosy african skin|habokana lesion madagascar|leprosy dark skin,Taches hypopigmentées ou rougeâtres avec perte de sensation
+3,Leishmaniose cutanée,Cutaneous Leishmaniasis,Leishmania spp.,Cutaneous leishmaniasis ulcer|oriental sore lesion|leishmania skin nodule|Cutaneous leishmaniasis africa|leishmaniasis dark skin lesion,Gros boutons ou ulcères (volcans) sur les zones découvertes
+4,Pian,Yaws,Treponema pallidum pertenue,Yaws skin lesions|Treponema pallidum pertenue framboesia|primary yaws papilloma|Yaws african child|Yaws skin lesions dark skin,Lésions en forme de framboise ou grands ulcères (enfants)
+5,Gale,Scabies,Sarcoptes scabiei,Scabies rash|Sarcoptes scabiei skin burrows|scabies crusted|Scabies rash dark skin|lagaly skin madagascar|scabies african skin,Petits boutons rouges (papules) prurigineux et lésions de grattage
+6,Teigne,Ringworm,Dermatophytosis / Tinea,Tinea corporis lesion|Ringworm skin patch|tinea capitis scalp|Ringworm black skin|Ringworm african scalp|tinea capitis dark skin,Plaques rondes rouges desquamantes à centre clair
+7,Tungose,Tungiasis / Jigger fleas,Tunga penetrans,Tungiasis foot|Jigger flea lesions|Tunga penetrans sole|Tungiasis foot africa|jigger flea foot dark skin|parasy jigger madagascar,Petits points noirs/blancs sous la peau ou les ongles des pieds
+8,Eczéma,Atopic dermatitis,Dermatitis,Atopic dermatitis skin|eczema lesions dark skin|eczema erythema|eczema black skin|atopic dermatitis african skin|eczema madagascar,Lésions sèches foncées ou grisâtres avec desquamation
+9,Mpox (Variole du singe),Mpox / Monkeypox,Monkeypox virus,Mpox skin lesions|Monkeypox pustules|monkeypox rash|Mpox dark skin|monkeypox african skin lesions|varioleun'ny rajako madagascar,Éruption cutanée avec vésicules et pustules évoluant en croûtes
