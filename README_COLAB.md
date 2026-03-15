@@ -16,8 +16,8 @@ drive.mount('/content/drive')
 %cd /content/
 
 # 2. On télécharge le code depuis votre GitHub
-!git clone https://github.com/VOTRE_NOM/VOTRE_REPO.git
-%cd VOTRE_REPO/
+!git clone https://github.com/franck504/CutisAI.git
+%cd CutisAI/
 
 # 3. Installation des paquets nécessaires au scraping (fast!)
 !pip install -q duckduckgo_search pandas requests Pillow tqdm
