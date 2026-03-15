@@ -1,5 +1,7 @@
 import os
 import argparse
+import time
+import random
 import pandas as pd
 import requests
 from io import BytesIO
@@ -62,21 +64,31 @@ def scrape_keyword(keyword, disease_name, output_dir):
     os.makedirs(disease_dir, exist_ok=True)
     
     try:
-        # Recherche DuckDuckGo Images
-        with DDGS() as ddgs:
-            results = list(ddgs.images(
-                keyword,
-                region="wt-wt",
-                safesearch="off",
-                size="Medium", # Évite les miniatures minuscules
-                type_image="photo", # Format photo réelle
-                max_results=MAX_IMAGES_PER_KEYWORD
-            ))
+        results = []
+        # Boucle de retry pour gérer le Ratelimit (403) DuckDuckGo
+        for attempt in range(5):
+            try:
+                with DDGS() as ddgs:
+                    results = list(ddgs.images(
+                        keyword,
+                        region="wt-wt",
+                        safesearch="off",
+                        size="Medium", # Évite les miniatures minuscules
+                        type_image="photo", # Format photo réelle
+                        max_results=MAX_IMAGES_PER_KEYWORD
+                    ))
+                break # On sort de la boucle si succès
+            except Exception as e:
+                if "403" in str(e) or "Ratelimit" in str(e).lower() or attempt < 4:
+                    wait_time = (attempt + 1) * 15 + random.randint(5, 15)
+                    print(f"    [!] RateLimit détecté pour le mot-clé. Pause antibot de {wait_time}s (Tentative {attempt+2}/5)...")
+                    time.sleep(wait_time)
+                else:
+                    raise e
             
         if not results:
             print(f"[-] Aucune image trouvée pour '{keyword}'.")
-            return 0
-            
+            return 0            
         urls = [res['image'] for res in results]
         print(f"    -> {len(urls)} URLs trouvées. Début du téléchargement (Threads: {MAX_WORKERS})...")
         
@@ -141,6 +153,8 @@ def main(csv_path, output_dir):
         for kw in keywords:
             kw = kw.strip()
             if kw:
+                # Pause stratégique entre les requêtes principales pour éviter le ban IP
+                time.sleep(random.uniform(5.0, 10.0))
                 dl_count = scrape_keyword(kw, disease_name, output_dir)
                 total_downloaded += dl_count
                 
