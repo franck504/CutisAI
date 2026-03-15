@@ -66,18 +66,38 @@ def search_duckduckgo(keyword, max_results):
     return [res['image'] for res in results]
 
 def search_bing(keyword, max_results):
-    # Bing renvoie généralement ~150 images par balise de page sans JS lourd
     url = f"https://www.bing.com/images/search?q={keyword}&form=HDRSC2&first=1"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5"
     }
     response = requests.get(url, headers=headers, timeout=15)
     response.raise_for_status()
     urls = re.findall(r'murl&quot;:&quot;(.*?)&quot;', response.text)
-    # Nettoyage d'url au cas où
     urls = [u for u in urls if u.startswith("http")]
+    return urls[:max_results]
+
+def search_yahoo(keyword, max_results):
+    url = f"https://images.search.yahoo.com/search/images?p={keyword}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
+    response = requests.get(url, headers=headers, timeout=15)
+    response.raise_for_status()
+    # Yahoo stocke les vraies urls d'image dans imgurl=&quot;...&quot;
+    urls = re.findall(r'imgurl=&quot;(http.*?)&quot;', response.text)
+    return urls[:max_results]
+
+def search_google(keyword, max_results):
+    # Google standard HTML fallback (Pas d'API requise, retourne souvent ~20-50 images max). Utile pour dépanner
+    url = f"https://www.google.com/search?q={keyword}&tbm=isch"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
+    response = requests.get(url, headers=headers, timeout=15)
+    response.raise_for_status()
+    # Extraction regex très agressive pour le JSON embarqué de google image 
+    urls = re.findall(r'\["(http.*?)",\d+,\d+\]', response.text)
+    urls = [u for u in urls if not "gstatic" in u and u.lower().endswith('.jpg') or u.lower().endswith('.png')]
     return urls[:max_results]
 
 def scrape_keyword(keyword, disease_name, output_dir):
@@ -93,26 +113,36 @@ def scrape_keyword(keyword, disease_name, output_dir):
     
     try:
         urls = []
-        engine = random.choice(["bing", "ddg"])
+        # Choix entre 4 moteurs pour diluer complètement le ratelimit
+        engines = ["ddg", "bing", "yahoo", "google"]
+        engine = random.choice(engines)
         print(f"    [🔍] Moteur principal choisi : {engine.upper()}")
         
-        # Boucle de retry pour gérer le Ratelimit (403) DuckDuckGo / autres erreurs
+        # Boucle de retry pour gérer le Ratelimit ou blocages
         for attempt in range(5):
             try:
                 if engine == "ddg":
                     urls = search_duckduckgo(keyword, MAX_IMAGES_PER_KEYWORD)
-                else:
+                elif engine == "bing":
                     urls = search_bing(keyword, MAX_IMAGES_PER_KEYWORD)
+                elif engine == "yahoo":
+                    urls = search_yahoo(keyword, MAX_IMAGES_PER_KEYWORD)
+                else:
+                    urls = search_google(keyword, MAX_IMAGES_PER_KEYWORD)
                 
                 if urls:
                     break # On sort de la boucle si succès
             except Exception as e:
                 is_timeout = "timeout" in str(e).lower()
-                if "403" in str(e) or "Ratelimit" in str(e).lower() or attempt < 4 or is_timeout:
-                    wait_time = (attempt + 1) * 10 + random.randint(5, 10)
-                    print(f"    [!] Erreur avec {engine.upper()} ({e.__class__.__name__}). Bascule de moteur et pause de {wait_time}s (Tentative {attempt+2}/5)...")
-                    # Bascule stratégique de moteur
-                    engine = "bing" if engine == "ddg" else "ddg"
+                if "403" in str(e) or "ratelimit" in str(e).lower() or "429" in str(e) or attempt < 4 or is_timeout:
+                    wait_time = (attempt + 1) * 5 + random.randint(3, 7)
+                    
+                    # Bascule immédiate vers un autre moteur
+                    engines.remove(engine)
+                    if not engines: engines = ["ddg", "bing", "yahoo", "google"] # reset
+                    engine = random.choice(engines)
+                    
+                    print(f"    [!] Erreur. Pause {wait_time}s... Bascule sur {engine.upper()} (Tentative {attempt+2}/5)")
                     time.sleep(wait_time)
                 else:
                     raise e
