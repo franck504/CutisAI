@@ -2,6 +2,7 @@ import os
 import argparse
 import time
 import random
+import re
 import pandas as pd
 import requests
 from io import BytesIO
@@ -52,11 +53,38 @@ def download_image(url, save_path):
     except Exception:
         return False
 
+def search_duckduckgo(keyword, max_results):
+    with DDGS() as ddgs:
+        results = list(ddgs.images(
+            keyword,
+            region="wt-wt",
+            safesearch="off",
+            size="Medium",
+            type_image="photo",
+            max_results=max_results
+        ))
+    return [res['image'] for res in results]
+
+def search_bing(keyword, max_results):
+    # Bing renvoie généralement ~150 images par balise de page sans JS lourd
+    url = f"https://www.bing.com/images/search?q={keyword}&form=HDRSC2&first=1"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5"
+    }
+    response = requests.get(url, headers=headers, timeout=15)
+    response.raise_for_status()
+    urls = re.findall(r'murl&quot;:&quot;(.*?)&quot;', response.text)
+    # Nettoyage d'url au cas où
+    urls = [u for u in urls if u.startswith("http")]
+    return urls[:max_results]
+
 def scrape_keyword(keyword, disease_name, output_dir):
     """
-    Cherche et télécharge les images pour un mot-clé précis en multi-threading.
+    Cherche et télécharge les images pour un mot-clé précis en multi-threading et multi-moteur.
     """
-    print(f"\n[*] Recherche DDG : '{keyword}'...")
+    print(f"\n[*] Traitement du mot-clé : '{keyword}'...")
     
     # Création du dossier pour cette maladie (Remplacer espaces par underscores)
     safe_disease_name = str(disease_name).strip().replace(" ", "_").replace("/", "-")
@@ -64,32 +92,34 @@ def scrape_keyword(keyword, disease_name, output_dir):
     os.makedirs(disease_dir, exist_ok=True)
     
     try:
-        results = []
-        # Boucle de retry pour gérer le Ratelimit (403) DuckDuckGo
+        urls = []
+        engine = random.choice(["bing", "ddg"])
+        print(f"    [🔍] Moteur principal choisi : {engine.upper()}")
+        
+        # Boucle de retry pour gérer le Ratelimit (403) DuckDuckGo / autres erreurs
         for attempt in range(5):
             try:
-                with DDGS() as ddgs:
-                    results = list(ddgs.images(
-                        keyword,
-                        region="wt-wt",
-                        safesearch="off",
-                        size="Medium", # Évite les miniatures minuscules
-                        type_image="photo", # Format photo réelle
-                        max_results=MAX_IMAGES_PER_KEYWORD
-                    ))
-                break # On sort de la boucle si succès
+                if engine == "ddg":
+                    urls = search_duckduckgo(keyword, MAX_IMAGES_PER_KEYWORD)
+                else:
+                    urls = search_bing(keyword, MAX_IMAGES_PER_KEYWORD)
+                
+                if urls:
+                    break # On sort de la boucle si succès
             except Exception as e:
-                if "403" in str(e) or "Ratelimit" in str(e).lower() or attempt < 4:
-                    wait_time = (attempt + 1) * 15 + random.randint(5, 15)
-                    print(f"    [!] RateLimit détecté pour le mot-clé. Pause antibot de {wait_time}s (Tentative {attempt+2}/5)...")
+                is_timeout = "timeout" in str(e).lower()
+                if "403" in str(e) or "Ratelimit" in str(e).lower() or attempt < 4 or is_timeout:
+                    wait_time = (attempt + 1) * 10 + random.randint(5, 10)
+                    print(f"    [!] Erreur avec {engine.upper()} ({e.__class__.__name__}). Bascule de moteur et pause de {wait_time}s (Tentative {attempt+2}/5)...")
+                    # Bascule stratégique de moteur
+                    engine = "bing" if engine == "ddg" else "ddg"
                     time.sleep(wait_time)
                 else:
                     raise e
             
-        if not results:
+        if not urls:
             print(f"[-] Aucune image trouvée pour '{keyword}'.")
-            return 0            
-        urls = [res['image'] for res in results]
+            return 0
         print(f"    -> {len(urls)} URLs trouvées. Début du téléchargement (Threads: {MAX_WORKERS})...")
         
         # Préparation des tâches
