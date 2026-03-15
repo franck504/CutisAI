@@ -1,0 +1,67 @@
+
+
+
+
+
+---
+
+## 🧠 Projet : IA de détection des maladies cutanées tropicales africaines
+
+Ton projet consiste à développer une **application mobile pour les médecins** utilisant **l’intelligence artificielle et la reconnaissance d’images** afin de **détecter automatiquement des maladies de la peau fréquentes en Afrique tropicale**.
+
+### Fonctionnement
+
+1. Le médecin **prend une photo de la peau du patient** avec l’application mobile.
+2. L’image est analysée par un **modèle d’intelligence artificielle entraîné avec des images médicales**.
+3. L’IA compare l’image avec une base de données d’images de maladies cutanées.
+4. L’application **propose la maladie la plus probable** et peut fournir des informations ou recommandations.
+
+### Objectif
+
+Aider les professionnels de santé, surtout dans les zones où il y a peu de dermatologues, à **identifier rapidement certaines maladies cutanées tropicales** comme :
+
+* Leprosy
+* Buruli Ulcer
+* Cutaneous Leishmaniasis
+* Scabies
+
+### Technologies possibles
+
+* **IA / Deep Learning** pour la reconnaissance d’image
+* Modèle comme **MobileNet** ou **ResNet**
+* **Application mobile Flutter** pour la prise de photo et l’affichage du résultat
+
+### Impact attendu
+
+* diagnostic plus rapide
+* aide aux médecins dans les zones rurales
+* amélioration du suivi des maladies cutanées tropicales en Afrique
+
+---
+
+✅ **Résumé en une phrase :**
+Ton projet est une **application mobile basée sur l’IA capable de reconnaître des maladies de la peau tropicales africaines à partir d’une photo prise par un médecin**.
+
+
+
+
+## Plan d'action amélioré
+
+**1. Phase de Recherche & Collecte**
+   * 1.1 Lister les maladies cutanées cibles et leurs noms scientifiques/techniques.
+   * 1.2 Collecter des images via Scraping + recherche de Datasets médicaux existants (Kaggle/Universités:ISIC Archive,DermNet NZ,Atlas of Dermatology , International Skin Imaging Collaboration, World Health Organization).
+
+**2. Phase de Préparation (Data Pipeline)**
+   * 2.1 Nettoyage automatisé : OpenCV (filtrage par détection de flou, suppression de doublons, recadrage automatique de la lésion).
+   * 2.2 Importation dans un outil de gestion (ex: Roboflow) et Data Augmentation (rotations, luminosité pour simuler la qualité des téléphones portables).
+   * 2.3 Vérification de la représentativité des couleurs de peau (éviter les biais).
+
+**3. Phase d'Entraînement de l'IA**
+   * 3.1 Entraînement sur Kaggle/Google Colab avec un modèle optimisé pour mobile (ex: EfficientNet ou MobileNetV3).
+   * 3.2 Conversion et compression du modèle d'IA au format TensorFlow Lite (.tflite).
+
+**4. Phase de Développement Mobile (Flutter)**
+   * 4.1 Création de l'application mobile Flutter (UI pour la prise de photo).
+   * 4.2 Intégration du modèle TFLite (Inférence Offline) : L'IA détecte la maladie directement sur le téléphone pour s'affranchir des problèmes de réseau dans les zones rurales.
+   * 4.3 Intégration d'une API IA Cloud pour la traduction des recommandations et solutions de soin en Malgache (si connexion internet disponible).
+
