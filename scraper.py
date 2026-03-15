@@ -66,14 +66,25 @@ def search_duckduckgo(keyword, max_results):
     return [res['image'] for res in results]
 
 def search_bing(keyword, max_results):
-    url = f"https://www.bing.com/images/search?q={keyword}&form=HDRSC2&first=1"
+    urls = []
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
     }
-    response = requests.get(url, headers=headers, timeout=15)
-    response.raise_for_status()
-    urls = re.findall(r'murl&quot;:&quot;(.*?)&quot;', response.text)
+    # Pagination asynchrone Bing : sauts de 150 images
+    for offset in range(1, max_results + 100, 150):
+        url = f"https://www.bing.com/images/async?q={keyword}&first={offset}&count=150"
+        try:
+            response = requests.get(url, headers=headers, timeout=15)
+            response.raise_for_status()
+            batch = re.findall(r'murl&quot;:&quot;(.*?)&quot;', response.text)
+            if not batch: break
+            urls.extend(batch)
+        except Exception:
+            break
+        # Optionnel: time.sleep(1) si nécessaire, mais Colab peut aller vite
     urls = [u for u in urls if u.startswith("http")]
+    # Supprimer les doublons en préservant l'ordre
+    urls = list(dict.fromkeys(urls))
     return urls[:max_results]
 
 def search_yahoo(keyword, max_results):
