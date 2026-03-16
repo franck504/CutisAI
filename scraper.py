@@ -124,21 +124,24 @@ def scrape_keyword(keyword, disease_name, output_dir):
     
     try:
         urls = []
-        # On force l'utilisation de Bing, qui est le seul moteur qui ne limite pas drastiquement les IPs Datacenter (Colab/Cloud)
-        engine = "bing"
-        print(f"    [🔍] Moteur principal choisi : {engine.upper()}")
         
-        # Boucle de retry pour gérer le Ratelimit ou blocages
-        for attempt in range(3):
-            try:
+        # On tente DDG d'abord car l'utilisateur le trouve très performant par défaut
+        print(f"    [🔍] Recherche principale via DuckDuckGo...")
+        try:
+            urls = search_duckduckgo(keyword, MAX_IMAGES_PER_KEYWORD)
+        except Exception as e:
+            is_timeout = "timeout" in str(e).lower()
+            if "403" in str(e) or "ratelimit" in str(e).lower() or "429" in str(e) or is_timeout:
+                print(f"    [!] DuckDuckGo bloque (Ratelimit/Timeout). Bascule immédiate et transparente vers Bing...")
+                # On utilise Bing Asynchrone en secours sans mettre en pause le programme
+                try:
+                    urls = search_bing(keyword, MAX_IMAGES_PER_KEYWORD)
+                except Exception as eval_e:
+                    print(f"    [-] Erreur Bing de secours : {eval_e}")
+            else:
+                print(f"    [-] Erreur DDG ({e}). Bascule vers Bing...")
                 urls = search_bing(keyword, MAX_IMAGES_PER_KEYWORD)
-                if urls:
-                    break # On sort de la boucle si succès
-            except Exception as e:
-                wait_time = (attempt + 1) * 5
-                print(f"    [!] Erreur. Pause {wait_time}s... (Tentative {attempt+2}/3)")
-                time.sleep(wait_time)
-            
+                
         if not urls:
             print(f"[-] Aucune image trouvée pour '{keyword}'.")
             return 0
