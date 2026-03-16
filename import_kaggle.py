@@ -20,13 +20,18 @@ KAGGLE_DATASETS = {
 DRIVE_BASE_DIR = "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
 
 def setup_kaggle():
-    """Vérifie et configure l'API Kaggle."""
+    """Vérifie et configure l'API Kaggle (via fichier ou variables d'env)."""
+    # 1. Vérifie si les variables d'environnement sont déjà présentes (plus simple sur Colab)
+    if os.environ.get("KAGGLE_USERNAME") and os.environ.get("KAGGLE_KEY"):
+        print("✅ Identifiants Kaggle détectés via variables d'environnement.")
+        return True
+
+    # 2. Sinon, cherche le fichier kaggle.json
     kaggle_dir = Path("/root/.kaggle")
     kaggle_json = kaggle_dir / "kaggle.json"
     
     if not kaggle_json.exists():
-        print("⚠️  Fichier kaggle.json non trouvé dans /root/.kaggle/")
-        print("Veuillez d'abord exécuter la cellule d'upload dans Colab.")
+        print("⚠️  Identifiants Kaggle manquants (ni variables d'env, ni fichier).")
         return False
     
     os.system("chmod 600 /root/.kaggle/kaggle.json")

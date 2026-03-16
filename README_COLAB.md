@@ -44,24 +44,45 @@ Le scraper V2 utilise **4 moteurs** (DDG → Bing → Google → Yahoo) et dédu
 
 ## 🏥 Phase 3 : Intégration de Données Expertes (Optionnel)
 
+## 🏥 Phase 3 : Intégration de Données Expertes (Optionnel)
+
+### 🗝️ Comment obtenir votre `kaggle.json` ?
+1. Allez sur [Kaggle.com](https://www.kaggle.com/) et connectez-vous.
+2. Cliquez sur votre **photo de profil** (en haut à droite) → **Settings**.
+3. Allez dans la section **API**.
+4. Cliquez sur **"Create New API Token"**.
+5. Un fichier nommé `kaggle.json` va se télécharger sur votre ordinateur. **Gardez-le**, c'est ce qu'on va uploader sur Colab.
+
 ### Cellule 6 : Importer les Datasets Kaggle (Validé / Clean)
-Cette étape télécharge Mpox v2, Lèpre (plaies) et DermNet depuis Kaggle.
+Cette étape télécharge Mpox v2, Lèpre et Scabies depuis Kaggle.
+
+**Option A : Je n'ai pas le fichier kaggle.json mais j'ai mon Token**
+Si vous avez un texte comme `KGAT_...`, utilisez ce bloc. Remplacez les valeurs ci-dessous :
+```python
+import os
+
+# ⬇️ REMPLACEZ PAR VOS INFOS ICI ⬇️
+os.environ['KAGGLE_USERNAME'] = "votre_nom_utilisateur" # ex: "cutisia"
+os.environ['KAGGLE_KEY'] = "votre_token_kgat" # ex: "KGAT_2a29c8..."
+
+# Installation de l'API et import
+!pip install -q kaggle
+!python import_kaggle.py
+```
+
+**Option B : J'ai le fichier kaggle.json**
 ```python
 import os
 from google.colab import files
 
-# 1. Upload du kaggle.json
 if not os.path.exists("/root/.kaggle/kaggle.json"):
-    print("📥 Veuillez uploader votre fichier kaggle.json :")
     uploaded = files.upload()
     if "kaggle.json" in uploaded:
         os.makedirs("/root/.kaggle", exist_ok=True)
         with open("/root/.kaggle/kaggle.json", "wb") as f:
             f.write(uploaded["kaggle.json"])
         os.chmod("/root/.kaggle/kaggle.json", 0o600)
-        print("✅ kaggle.json configuré.")
 
-# 2. Installation de l'API et import
 !pip install -q kaggle
 !python import_kaggle.py
 ```
