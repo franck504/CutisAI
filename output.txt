@@ -1,0 +1,1391 @@
+============================================================
+🚀 SCRAPER V2 — IMAGES MÉDICALES (MULTI-MOTEUR)
+============================================================
+📁 Destination : /content/drive/MyDrive/Projet_Medical/Dataset_Images
+📄 Source CSV  : target_diseases.csv
+🔧 Config      : max_images=300, threads=15
+🔍 Moteurs     : DuckDuckGo → Bing → Google (udm=2) → Yahoo
+🔒 Dédup       : SHA256 (globale inter-mots-clés)
+
+
+############################################################
+🧬 MALADIE 1/9: Buruli Ulcer
+   Mots-clés : 10
+############################################################
+
+============================================================
+[*] Mot-clé : 'Buruli ulcer lesion'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 44 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 44 URLs uniques (total brut: 44) [DDG:0, Bing:44, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 44 images (Threads: 15)...
+    Tél. Buruli_ulcer_lesion: 100%|█████████████████████████████████| 44/44 [00:03<00:00, 13.58it/s]
+    [+] ✅ 26/44 nouvelles images uniques pour 'Buruli ulcer lesion'
+
+============================================================
+[*] Mot-clé : 'Mycobacterium ulcerans skin ulcer'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 53 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 53 URLs uniques (total brut: 53) [DDG:0, Bing:53, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 53 images (Threads: 15)...
+    Tél. Mycobacterium_ulcerans_skin_ul: 100%|██████████████████████| 53/53 [00:01<00:00, 49.85it/s]
+    [+] ✅ 38/53 nouvelles images uniques pour 'Mycobacterium ulcerans skin ulcer'
+
+============================================================
+[*] Mot-clé : 'Buruli nodule'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 45 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 45 URLs uniques (total brut: 45) [DDG:0, Bing:45, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 45 images (Threads: 15)...
+    Tél. Buruli_nodule: 100%|███████████████████████████████████████| 45/45 [00:03<00:00, 14.99it/s]
+    [+] ✅ 31/45 nouvelles images uniques pour 'Buruli nodule'
+
+============================================================
+[*] Mot-clé : 'Buruli ulcer dark skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 44 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 44 URLs uniques (total brut: 44) [DDG:0, Bing:44, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 44 images (Threads: 15)...
+    Tél. Buruli_ulcer_dark_skin: 100%|██████████████████████████████| 44/44 [00:03<00:00, 13.03it/s]
+    [+] ✅ 16/44 nouvelles images uniques pour 'Buruli ulcer dark skin'
+
+============================================================
+[*] Mot-clé : 'Buruli ulcer Africa'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 40 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 40 URLs uniques (total brut: 40) [DDG:0, Bing:40, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 40 images (Threads: 15)...
+    Tél. Buruli_ulcer_Africa: 100%|█████████████████████████████████| 40/40 [00:07<00:00,  5.58it/s]
+    [+] ✅ 13/40 nouvelles images uniques pour 'Buruli ulcer Africa'
+
+============================================================
+[*] Mot-clé : 'fery Buruli madagascar'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 63 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 63 URLs uniques (total brut: 63) [DDG:0, Bing:63, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 63 images (Threads: 15)...
+    Tél. fery_Buruli_madagascar: 100%|██████████████████████████████| 63/63 [00:05<00:00, 10.92it/s]
+    [+] ✅ 27/63 nouvelles images uniques pour 'fery Buruli madagascar'
+
+============================================================
+[*] Mot-clé : 'ulcere de Buruli peau'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 214 URLs
+    [🔍] Bing... ✅ 44 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 252 URLs uniques (total brut: 258) [DDG:214, Bing:44, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 252 images (Threads: 15)...
+    Tél. ulcere_de_Buruli_peau: 100%|█████████████████████████████| 252/252 [00:15<00:00, 16.69it/s]
+    [+] ✅ 175/252 nouvelles images uniques pour 'ulcere de Buruli peau'
+
+============================================================
+[*] Mot-clé : 'Buruli ulcer wound'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 40 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 40 URLs uniques (total brut: 40) [DDG:0, Bing:40, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 40 images (Threads: 15)...
+    Tél. Buruli_ulcer_wound: 100%|██████████████████████████████████| 40/40 [00:01<00:00, 21.23it/s]
+    [+] ✅ 6/40 nouvelles images uniques pour 'Buruli ulcer wound'
+
+============================================================
+[*] Mot-clé : 'Buruli ulcer child'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 51 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 51 URLs uniques (total brut: 51) [DDG:0, Bing:51, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 51 images (Threads: 15)...
+    Tél. Buruli_ulcer_child: 100%|██████████████████████████████████| 51/51 [00:03<00:00, 15.59it/s]
+    [+] ✅ 11/51 nouvelles images uniques pour 'Buruli ulcer child'
+
+============================================================
+[*] Mot-clé : 'Buruli ulcer tropical dermatology'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 209 URLs
+    [🔍] Bing... ✅ 45 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 251 URLs uniques (total brut: 254) [DDG:209, Bing:45, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 251 images (Threads: 15)...
+    Tél. Buruli_ulcer_tropical_dermatol: 100%|████████████████████| 251/251 [00:14<00:00, 17.45it/s]
+    [+] ✅ 123/251 nouvelles images uniques pour 'Buruli ulcer tropical dermatology'
+
+    📊 Bilan Buruli Ulcer: 466 images uniques téléchargées
+
+############################################################
+🧬 MALADIE 2/9: Leprosy
+   Mots-clés : 10
+############################################################
+
+============================================================
+[*] Mot-clé : 'Leprosy skin lesions'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 52 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 349 URLs uniques (total brut: 352) [DDG:300, Bing:52, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 349 images (Threads: 15)...
+    Tél. Leprosy_skin_lesions: 100%|██████████████████████████████| 349/349 [00:07<00:00, 46.97it/s]
+    [+] ✅ 227/349 nouvelles images uniques pour 'Leprosy skin lesions'
+
+============================================================
+[*] Mot-clé : 'Hansen's disease macules'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 58 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 58 URLs uniques (total brut: 58) [DDG:0, Bing:58, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 58 images (Threads: 15)...
+    Tél. Hansens_disease_macules: 100%|█████████████████████████████| 58/58 [00:09<00:00,  6.22it/s]
+    [+] ✅ 40/58 nouvelles images uniques pour 'Hansen's disease macules'
+
+============================================================
+[*] Mot-clé : 'lepromatous leprosy skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 40 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 40 URLs uniques (total brut: 40) [DDG:0, Bing:40, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 40 images (Threads: 15)...
+    Tél. lepromatous_leprosy_skin: 100%|████████████████████████████| 40/40 [00:02<00:00, 14.04it/s]
+    [+] ✅ 18/40 nouvelles images uniques pour 'lepromatous leprosy skin'
+
+============================================================
+[*] Mot-clé : 'Leprosy african skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 43 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 43 URLs uniques (total brut: 43) [DDG:0, Bing:43, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 43 images (Threads: 15)...
+    Tél. Leprosy_african_skin: 100%|████████████████████████████████| 43/43 [00:02<00:00, 15.64it/s]
+    [+] ✅ 33/43 nouvelles images uniques pour 'Leprosy african skin'
+
+============================================================
+[*] Mot-clé : 'habokana lesion madagascar'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 55 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 55 URLs uniques (total brut: 55) [DDG:0, Bing:55, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 55 images (Threads: 15)...
+    Tél. habokana_lesion_madagascar: 100%|██████████████████████████| 55/55 [00:02<00:00, 26.37it/s]
+    [+] ✅ 42/55 nouvelles images uniques pour 'habokana lesion madagascar'
+
+============================================================
+[*] Mot-clé : 'leprosy dark skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 48 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 48 URLs uniques (total brut: 48) [DDG:0, Bing:48, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 48 images (Threads: 15)...
+    Tél. leprosy_dark_skin: 100%|███████████████████████████████████| 48/48 [00:01<00:00, 26.86it/s]
+    [+] ✅ 18/48 nouvelles images uniques pour 'leprosy dark skin'
+
+============================================================
+[*] Mot-clé : 'lepre peau lesion'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 57 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 57 URLs uniques (total brut: 57) [DDG:0, Bing:57, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 57 images (Threads: 15)...
+    Tél. lepre_peau_lesion: 100%|███████████████████████████████████| 57/57 [00:03<00:00, 16.79it/s]
+    [+] ✅ 42/57 nouvelles images uniques pour 'lepre peau lesion'
+
+============================================================
+[*] Mot-clé : 'tuberculoid leprosy patch'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 41 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 41 URLs uniques (total brut: 41) [DDG:0, Bing:41, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 41 images (Threads: 15)...
+    Tél. tuberculoid_leprosy_patch: 100%|███████████████████████████| 41/41 [00:01<00:00, 22.88it/s]
+    [+] ✅ 16/41 nouvelles images uniques pour 'tuberculoid leprosy patch'
+
+============================================================
+[*] Mot-clé : 'borderline leprosy skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 56 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 56 URLs uniques (total brut: 56) [DDG:0, Bing:56, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 56 images (Threads: 15)...
+    Tél. borderline_leprosy_skin: 100%|█████████████████████████████| 56/56 [00:04<00:00, 12.36it/s]
+    [+] ✅ 23/56 nouvelles images uniques pour 'borderline leprosy skin'
+
+============================================================
+[*] Mot-clé : 'leprosy dermatology atlas'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 69 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 69 URLs uniques (total brut: 69) [DDG:0, Bing:69, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 69 images (Threads: 15)...
+    Tél. leprosy_dermatology_atlas: 100%|███████████████████████████| 69/69 [00:03<00:00, 19.63it/s]
+    [+] ✅ 47/69 nouvelles images uniques pour 'leprosy dermatology atlas'
+
+    📊 Bilan Leprosy: 506 images uniques téléchargées
+
+############################################################
+🧬 MALADIE 3/9: Cutaneous Leishmaniasis
+   Mots-clés : 12
+############################################################
+
+============================================================
+[*] Mot-clé : 'Cutaneous leishmaniasis ulcer'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 37 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 37 URLs uniques (total brut: 37) [DDG:0, Bing:37, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 37 images (Threads: 15)...
+    Tél. Cutaneous_leishmaniasis_ulcer: 100%|███████████████████████| 37/37 [00:01<00:00, 27.09it/s]
+    [+] ✅ 23/37 nouvelles images uniques pour 'Cutaneous leishmaniasis ulcer'
+
+============================================================
+[*] Mot-clé : 'oriental sore lesion'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 52 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 52 URLs uniques (total brut: 52) [DDG:0, Bing:52, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 52 images (Threads: 15)...
+    Tél. oriental_sore_lesion: 100%|████████████████████████████████| 52/52 [00:00<00:00, 54.35it/s]
+    [+] ✅ 20/52 nouvelles images uniques pour 'oriental sore lesion'
+
+============================================================
+[*] Mot-clé : 'leishmania skin nodule'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 65 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 65 URLs uniques (total brut: 65) [DDG:0, Bing:65, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 65 images (Threads: 15)...
+    Tél. leishmania_skin_nodule: 100%|██████████████████████████████| 65/65 [00:10<00:00,  6.00it/s]
+    [+] ✅ 31/65 nouvelles images uniques pour 'leishmania skin nodule'
+
+============================================================
+[*] Mot-clé : 'Cutaneous leishmaniasis africa'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 44 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 44 URLs uniques (total brut: 44) [DDG:0, Bing:44, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 44 images (Threads: 15)...
+    Tél. Cutaneous_leishmaniasis_africa: 100%|██████████████████████| 44/44 [00:02<00:00, 18.49it/s]
+    [+] ✅ 28/44 nouvelles images uniques pour 'Cutaneous leishmaniasis africa'
+
+============================================================
+[*] Mot-clé : 'leishmaniasis dark skin lesion'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 43 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 43 URLs uniques (total brut: 43) [DDG:0, Bing:43, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 43 images (Threads: 15)...
+    Tél. leishmaniasis_dark_skin_lesion: 100%|██████████████████████| 43/43 [00:01<00:00, 27.97it/s]
+    [+] ✅ 20/43 nouvelles images uniques pour 'leishmaniasis dark skin lesion'
+
+============================================================
+[*] Mot-clé : 'leishmaniose cutanee ulcere'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 62 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 360 URLs uniques (total brut: 362) [DDG:300, Bing:62, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 360 images (Threads: 15)...
+    Tél. leishmaniose_cutanee_ulcere: 100%|███████████████████████| 360/360 [00:17<00:00, 21.16it/s]
+    [+] ✅ 280/360 nouvelles images uniques pour 'leishmaniose cutanee ulcere'
+
+============================================================
+[*] Mot-clé : 'leishmaniasis dermatology'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 58 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 58 URLs uniques (total brut: 58) [DDG:0, Bing:58, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 58 images (Threads: 15)...
+    Tél. leishmaniasis_dermatology: 100%|███████████████████████████| 58/58 [00:09<00:00,  6.10it/s]
+    [+] ✅ 26/58 nouvelles images uniques pour 'leishmaniasis dermatology'
+
+============================================================
+[*] Mot-clé : 'kala azar skin lesion'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 51 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 51 URLs uniques (total brut: 51) [DDG:0, Bing:51, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 51 images (Threads: 15)...
+    Tél. kala_azar_skin_lesion: 100%|███████████████████████████████| 51/51 [00:11<00:00,  4.63it/s]
+    [+] ✅ 41/51 nouvelles images uniques pour 'kala azar skin lesion'
+
+============================================================
+[*] Mot-clé : 'leishmania tropica ulcer'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 40 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 40 URLs uniques (total brut: 40) [DDG:0, Bing:40, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 40 images (Threads: 15)...
+    Tél. leishmania_tropica_ulcer: 100%|████████████████████████████| 40/40 [00:02<00:00, 16.48it/s]
+    [+] ✅ 21/40 nouvelles images uniques pour 'leishmania tropica ulcer'
+
+============================================================
+[*] Mot-clé : 'cutaneous leishmaniasis clinical'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 47 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 47 URLs uniques (total brut: 47) [DDG:0, Bing:47, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 47 images (Threads: 15)...
+    Tél. cutaneous_leishmaniasis_clinic: 100%|██████████████████████| 47/47 [00:01<00:00, 27.93it/s]
+    [+] ✅ 20/47 nouvelles images uniques pour 'cutaneous leishmaniasis clinical'
+
+============================================================
+[*] Mot-clé : 'post kala azar dermal leishmaniasis'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 50 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 50 URLs uniques (total brut: 50) [DDG:0, Bing:50, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 50 images (Threads: 15)...
+    Tél. post_kala_azar_dermal_leishman: 100%|██████████████████████| 50/50 [00:11<00:00,  4.54it/s]
+    [+] ✅ 32/50 nouvelles images uniques pour 'post kala azar dermal leishmaniasis'
+
+============================================================
+[*] Mot-clé : 'leishmaniose peau photo'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 52 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 52 URLs uniques (total brut: 52) [DDG:0, Bing:52, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 52 images (Threads: 15)...
+    Tél. leishmaniose_peau_photo: 100%|█████████████████████████████| 52/52 [00:03<00:00, 16.96it/s]
+    [+] ✅ 28/52 nouvelles images uniques pour 'leishmaniose peau photo'
+
+    📊 Bilan Cutaneous Leishmaniasis: 570 images uniques téléchargées
+
+############################################################
+🧬 MALADIE 4/9: Yaws
+   Mots-clés : 9
+############################################################
+
+============================================================
+[*] Mot-clé : 'Yaws skin lesions'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 50 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 341 URLs uniques (total brut: 350) [DDG:300, Bing:50, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 341 images (Threads: 15)...
+    Tél. Yaws_skin_lesions: 100%|█████████████████████████████████| 341/341 [00:12<00:00, 26.24it/s]
+    [+] ✅ 265/341 nouvelles images uniques pour 'Yaws skin lesions'
+
+============================================================
+[*] Mot-clé : 'Treponema pallidum pertenue framboesia'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 61 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 61 URLs uniques (total brut: 61) [DDG:0, Bing:61, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 61 images (Threads: 15)...
+    Tél. Treponema_pallidum_pertenue_fr: 100%|██████████████████████| 61/61 [00:08<00:00,  6.84it/s]
+    [+] ✅ 48/61 nouvelles images uniques pour 'Treponema pallidum pertenue framboesia'
+
+============================================================
+[*] Mot-clé : 'primary yaws papilloma'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 56 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 56 URLs uniques (total brut: 56) [DDG:0, Bing:56, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 56 images (Threads: 15)...
+    Tél. primary_yaws_papilloma: 100%|██████████████████████████████| 56/56 [00:02<00:00, 20.40it/s]
+    [+] ✅ 35/56 nouvelles images uniques pour 'primary yaws papilloma'
+
+============================================================
+[*] Mot-clé : 'Yaws african child'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 69 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 69 URLs uniques (total brut: 69) [DDG:0, Bing:69, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 69 images (Threads: 15)...
+    Tél. Yaws_african_child: 100%|██████████████████████████████████| 69/69 [00:02<00:00, 24.50it/s]
+    [+] ✅ 52/69 nouvelles images uniques pour 'Yaws african child'
+
+============================================================
+[*] Mot-clé : 'Yaws skin lesions dark skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 53 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 53 URLs uniques (total brut: 53) [DDG:0, Bing:53, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 53 images (Threads: 15)...
+    Tél. Yaws_skin_lesions_dark_skin: 100%|█████████████████████████| 53/53 [00:01<00:00, 29.69it/s]
+    [+] ✅ 10/53 nouvelles images uniques pour 'Yaws skin lesions dark skin'
+
+============================================================
+[*] Mot-clé : 'pian maladie peau'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 48 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 48 URLs uniques (total brut: 48) [DDG:0, Bing:48, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 48 images (Threads: 15)...
+    Tél. pian_maladie_peau: 100%|███████████████████████████████████| 48/48 [00:10<00:00,  4.77it/s]
+    [+] ✅ 37/48 nouvelles images uniques pour 'pian maladie peau'
+
+============================================================
+[*] Mot-clé : 'yaws tropical ulcer'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 59 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 59 URLs uniques (total brut: 59) [DDG:0, Bing:59, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 59 images (Threads: 15)...
+    Tél. yaws_tropical_ulcer: 100%|█████████████████████████████████| 59/59 [00:02<00:00, 28.34it/s]
+    [+] ✅ 32/59 nouvelles images uniques pour 'yaws tropical ulcer'
+
+============================================================
+[*] Mot-clé : 'secondary yaws skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 240 URLs
+    [🔍] Bing... ✅ 51 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 286 URLs uniques (total brut: 291) [DDG:240, Bing:51, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 286 images (Threads: 15)...
+    Tél. secondary_yaws_skin: 100%|███████████████████████████████| 286/286 [00:06<00:00, 43.76it/s]
+    [+] ✅ 153/286 nouvelles images uniques pour 'secondary yaws skin'
+
+============================================================
+[*] Mot-clé : 'yaws dermatology atlas'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 47 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 346 URLs uniques (total brut: 347) [DDG:300, Bing:47, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 346 images (Threads: 15)...
+    Tél. yaws_dermatology_atlas: 100%|████████████████████████████| 346/346 [00:12<00:00, 27.41it/s]
+    [+] ✅ 236/346 nouvelles images uniques pour 'yaws dermatology atlas'
+
+    📊 Bilan Yaws: 868 images uniques téléchargées
+
+############################################################
+🧬 MALADIE 5/9: Scabies
+   Mots-clés : 11
+############################################################
+
+============================================================
+[*] Mot-clé : 'Scabies rash'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 276 URLs
+    [🔍] Bing... ✅ 56 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 331 URLs uniques (total brut: 332) [DDG:276, Bing:56, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 331 images (Threads: 15)...
+    Tél. Scabies_rash: 100%|██████████████████████████████████████| 331/331 [00:06<00:00, 48.29it/s]
+    [+] ✅ 299/331 nouvelles images uniques pour 'Scabies rash'
+
+============================================================
+[*] Mot-clé : 'Sarcoptes scabiei skin burrows'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 222 URLs
+    [🔍] Bing... ✅ 41 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 263 URLs uniques (total brut: 263) [DDG:222, Bing:41, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 263 images (Threads: 15)...
+    Tél. Sarcoptes_scabiei_skin_burrows: 100%|████████████████████| 263/263 [00:21<00:00, 12.11it/s]
+    [+] ✅ 192/263 nouvelles images uniques pour 'Sarcoptes scabiei skin burrows'
+
+============================================================
+[*] Mot-clé : 'scabies crusted'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 53 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 351 URLs uniques (total brut: 353) [DDG:300, Bing:53, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 351 images (Threads: 15)...
+    Tél. scabies_crusted: 100%|███████████████████████████████████| 351/351 [00:14<00:00, 24.57it/s]
+    [+] ✅ 194/351 nouvelles images uniques pour 'scabies crusted'
+
+============================================================
+[*] Mot-clé : 'Scabies rash dark skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 40 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 40 URLs uniques (total brut: 40) [DDG:0, Bing:40, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 40 images (Threads: 15)...
+    Tél. Scabies_rash_dark_skin: 100%|██████████████████████████████| 40/40 [00:20<00:00,  1.92it/s]
+    [+] ✅ 20/40 nouvelles images uniques pour 'Scabies rash dark skin'
+
+============================================================
+[*] Mot-clé : 'lagaly skin madagascar'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 243 URLs
+    [🔍] Bing... ✅ 50 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 290 URLs uniques (total brut: 293) [DDG:243, Bing:50, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 290 images (Threads: 15)...
+    Tél. lagaly_skin_madagascar: 100%|████████████████████████████| 290/290 [00:11<00:00, 24.89it/s]
+    [+] ✅ 240/290 nouvelles images uniques pour 'lagaly skin madagascar'
+
+============================================================
+[*] Mot-clé : 'scabies african skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 56 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 56 URLs uniques (total brut: 56) [DDG:0, Bing:56, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 56 images (Threads: 15)...
+    Tél. scabies_african_skin: 100%|████████████████████████████████| 56/56 [00:01<00:00, 40.81it/s]
+    [+] ✅ 28/56 nouvelles images uniques pour 'scabies african skin'
+
+============================================================
+[*] Mot-clé : 'gale lesion peau'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 37 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 37 URLs uniques (total brut: 37) [DDG:0, Bing:37, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 37 images (Threads: 15)...
+    Tél. gale_lesion_peau: 100%|████████████████████████████████████| 37/37 [00:01<00:00, 23.32it/s]
+    [+] ✅ 35/37 nouvelles images uniques pour 'gale lesion peau'
+
+============================================================
+[*] Mot-clé : 'scabies dermatology clinical'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 50 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 50 URLs uniques (total brut: 50) [DDG:0, Bing:50, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 50 images (Threads: 15)...
+    Tél. scabies_dermatology_clinical: 100%|████████████████████████| 50/50 [00:02<00:00, 18.20it/s]
+    [+] ✅ 35/50 nouvelles images uniques pour 'scabies dermatology clinical'
+
+============================================================
+[*] Mot-clé : 'norwegian scabies'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 292 URLs
+    [🔍] Bing... ✅ 53 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 342 URLs uniques (total brut: 345) [DDG:292, Bing:53, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 342 images (Threads: 15)...
+    Tél. norwegian_scabies: 100%|█████████████████████████████████| 342/342 [00:15<00:00, 21.95it/s]
+    [+] ✅ 178/342 nouvelles images uniques pour 'norwegian scabies'
+
+============================================================
+[*] Mot-clé : 'scabies infestation skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 58 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 58 URLs uniques (total brut: 58) [DDG:0, Bing:58, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 58 images (Threads: 15)...
+    Tél. scabies_infestation_skin: 100%|████████████████████████████| 58/58 [00:01<00:00, 49.99it/s]
+    [+] ✅ 29/58 nouvelles images uniques pour 'scabies infestation skin'
+
+============================================================
+[*] Mot-clé : 'scabies tropical medicine'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 59 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 59 URLs uniques (total brut: 59) [DDG:0, Bing:59, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 59 images (Threads: 15)...
+    Tél. scabies_tropical_medicine: 100%|███████████████████████████| 59/59 [00:05<00:00, 11.25it/s]
+    [+] ✅ 44/59 nouvelles images uniques pour 'scabies tropical medicine'
+
+    📊 Bilan Scabies: 1294 images uniques téléchargées
+
+############################################################
+🧬 MALADIE 6/9: Ringworm
+   Mots-clés : 10
+############################################################
+
+============================================================
+[*] Mot-clé : 'Tinea corporis lesion'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 57 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 57 URLs uniques (total brut: 57) [DDG:0, Bing:57, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 57 images (Threads: 15)...
+    Tél. Tinea_corporis_lesion: 100%|███████████████████████████████| 57/57 [00:04<00:00, 12.45it/s]
+    [+] ✅ 42/57 nouvelles images uniques pour 'Tinea corporis lesion'
+
+============================================================
+[*] Mot-clé : 'Ringworm skin patch'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 60 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 60 URLs uniques (total brut: 60) [DDG:0, Bing:60, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 60 images (Threads: 15)...
+    Tél. Ringworm_skin_patch: 100%|█████████████████████████████████| 60/60 [00:01<00:00, 32.37it/s]
+    [+] ✅ 48/60 nouvelles images uniques pour 'Ringworm skin patch'
+
+============================================================
+[*] Mot-clé : 'tinea capitis scalp'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 62 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 62 URLs uniques (total brut: 62) [DDG:0, Bing:62, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 62 images (Threads: 15)...
+    Tél. tinea_capitis_scalp: 100%|█████████████████████████████████| 62/62 [00:07<00:00,  8.41it/s]
+    [+] ✅ 51/62 nouvelles images uniques pour 'tinea capitis scalp'
+
+============================================================
+[*] Mot-clé : 'Ringworm black skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 56 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 56 URLs uniques (total brut: 56) [DDG:0, Bing:56, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 56 images (Threads: 15)...
+    Tél. Ringworm_black_skin: 100%|█████████████████████████████████| 56/56 [00:01<00:00, 48.78it/s]
+    [+] ✅ 37/56 nouvelles images uniques pour 'Ringworm black skin'
+
+============================================================
+[*] Mot-clé : 'Ringworm african scalp'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 287 URLs
+    [🔍] Bing... ✅ 38 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 324 URLs uniques (total brut: 325) [DDG:287, Bing:38, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 324 images (Threads: 15)...
+    Tél. Ringworm_african_scalp: 100%|████████████████████████████| 324/324 [00:08<00:00, 40.32it/s]
+    [+] ✅ 253/324 nouvelles images uniques pour 'Ringworm african scalp'
+
+============================================================
+[*] Mot-clé : 'tinea capitis dark skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 59 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 59 URLs uniques (total brut: 59) [DDG:0, Bing:59, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 59 images (Threads: 15)...
+    Tél. tinea_capitis_dark_skin: 100%|█████████████████████████████| 59/59 [00:02<00:00, 21.38it/s]
+    [+] ✅ 24/59 nouvelles images uniques pour 'tinea capitis dark skin'
+
+============================================================
+[*] Mot-clé : 'teigne cuir chevelu'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 52 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 52 URLs uniques (total brut: 52) [DDG:0, Bing:52, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 52 images (Threads: 15)...
+    Tél. teigne_cuir_chevelu: 100%|█████████████████████████████████| 52/52 [00:02<00:00, 24.23it/s]
+    [+] ✅ 30/52 nouvelles images uniques pour 'teigne cuir chevelu'
+
+============================================================
+[*] Mot-clé : 'dermatophytose peau'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 55 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 55 URLs uniques (total brut: 55) [DDG:0, Bing:55, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 55 images (Threads: 15)...
+    Tél. dermatophytose_peau: 100%|█████████████████████████████████| 55/55 [00:02<00:00, 24.10it/s]
+    [+] ✅ 48/55 nouvelles images uniques pour 'dermatophytose peau'
+
+============================================================
+[*] Mot-clé : 'tinea corporis dermatology'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 39 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 39 URLs uniques (total brut: 39) [DDG:0, Bing:39, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 39 images (Threads: 15)...
+    Tél. tinea_corporis_dermatology: 100%|██████████████████████████| 39/39 [00:02<00:00, 14.58it/s]
+    [+] ✅ 14/39 nouvelles images uniques pour 'tinea corporis dermatology'
+
+============================================================
+[*] Mot-clé : 'ringworm clinical photo'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 65 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 65 URLs uniques (total brut: 65) [DDG:0, Bing:65, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 65 images (Threads: 15)...
+    Tél. ringworm_clinical_photo: 100%|█████████████████████████████| 65/65 [00:02<00:00, 25.63it/s]
+    [+] ✅ 40/65 nouvelles images uniques pour 'ringworm clinical photo'
+
+    📊 Bilan Ringworm: 587 images uniques téléchargées
+
+############################################################
+🧬 MALADIE 7/9: Tungiasis / Jigger fleas
+   Mots-clés : 9
+############################################################
+
+============================================================
+[*] Mot-clé : 'Tungiasis foot'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 39 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 330 URLs uniques (total brut: 339) [DDG:300, Bing:39, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 330 images (Threads: 15)...
+    Tél. Tungiasis_foot: 100%|████████████████████████████████████| 330/330 [00:14<00:00, 22.52it/s]
+    [+] ✅ 243/330 nouvelles images uniques pour 'Tungiasis foot'
+
+============================================================
+[*] Mot-clé : 'Jigger flea lesions'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 49 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 49 URLs uniques (total brut: 49) [DDG:0, Bing:49, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 49 images (Threads: 15)...
+    Tél. Jigger_flea_lesions: 100%|█████████████████████████████████| 49/49 [00:02<00:00, 24.18it/s]
+    [+] ✅ 40/49 nouvelles images uniques pour 'Jigger flea lesions'
+
+============================================================
+[*] Mot-clé : 'Tunga penetrans sole'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 46 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 46 URLs uniques (total brut: 46) [DDG:0, Bing:46, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 46 images (Threads: 15)...
+    Tél. Tunga_penetrans_sole: 100%|████████████████████████████████| 46/46 [00:02<00:00, 18.07it/s]
+    [+] ✅ 26/46 nouvelles images uniques pour 'Tunga penetrans sole'
+
+============================================================
+[*] Mot-clé : 'Tungiasis foot africa'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 39 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 39 URLs uniques (total brut: 39) [DDG:0, Bing:39, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 39 images (Threads: 15)...
+    Tél. Tungiasis_foot_africa: 100%|███████████████████████████████| 39/39 [00:02<00:00, 18.09it/s]
+    [+] ✅ 7/39 nouvelles images uniques pour 'Tungiasis foot africa'
+
+============================================================
+[*] Mot-clé : 'jigger flea foot dark skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 45 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 45 URLs uniques (total brut: 45) [DDG:0, Bing:45, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 45 images (Threads: 15)...
+    Tél. jigger_flea_foot_dark_skin: 100%|██████████████████████████| 45/45 [00:00<00:00, 46.35it/s]
+    [+] ✅ 19/45 nouvelles images uniques pour 'jigger flea foot dark skin'
+
+============================================================
+[*] Mot-clé : 'parasy jigger madagascar'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 64 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 64 URLs uniques (total brut: 64) [DDG:0, Bing:64, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 64 images (Threads: 15)...
+    Tél. parasy_jigger_madagascar: 100%|████████████████████████████| 64/64 [00:08<00:00,  7.25it/s]
+    [+] ✅ 41/64 nouvelles images uniques pour 'parasy jigger madagascar'
+
+============================================================
+[*] Mot-clé : 'tungose pied lesion'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 62 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 62 URLs uniques (total brut: 62) [DDG:0, Bing:62, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 62 images (Threads: 15)...
+    Tél. tungose_pied_lesion: 100%|█████████████████████████████████| 62/62 [00:02<00:00, 23.99it/s]
+    [+] ✅ 43/62 nouvelles images uniques pour 'tungose pied lesion'
+
+============================================================
+[*] Mot-clé : 'tungiasis toes clinical'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 232 URLs
+    [🔍] Bing... ✅ 42 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 263 URLs uniques (total brut: 274) [DDG:232, Bing:42, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 263 images (Threads: 15)...
+    Tél. tungiasis_toes_clinical: 100%|███████████████████████████| 263/263 [00:10<00:00, 24.41it/s]
+    [+] ✅ 129/263 nouvelles images uniques pour 'tungiasis toes clinical'
+
+============================================================
+[*] Mot-clé : 'sand flea skin lesion'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 64 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 64 URLs uniques (total brut: 64) [DDG:0, Bing:64, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 64 images (Threads: 15)...
+    Tél. sand_flea_skin_lesion: 100%|███████████████████████████████| 64/64 [00:01<00:00, 40.10it/s]
+    [+] ✅ 58/64 nouvelles images uniques pour 'sand flea skin lesion'
+
+    📊 Bilan Tungiasis / Jigger fleas: 606 images uniques téléchargées
+
+############################################################
+🧬 MALADIE 8/9: Atopic dermatitis
+   Mots-clés : 9
+############################################################
+
+============================================================
+[*] Mot-clé : 'Atopic dermatitis skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 287 URLs
+    [🔍] Bing... ✅ 77 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 364 URLs uniques (total brut: 364) [DDG:287, Bing:77, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 364 images (Threads: 15)...
+    Tél. Atopic_dermatitis_skin: 100%|████████████████████████████| 364/364 [00:09<00:00, 39.02it/s]
+    [+] ✅ 297/364 nouvelles images uniques pour 'Atopic dermatitis skin'
+
+============================================================
+[*] Mot-clé : 'eczema lesions dark skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 54 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 54 URLs uniques (total brut: 54) [DDG:0, Bing:54, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 54 images (Threads: 15)...
+    Tél. eczema_lesions_dark_skin: 100%|████████████████████████████| 54/54 [00:01<00:00, 38.88it/s]
+    [+] ✅ 42/54 nouvelles images uniques pour 'eczema lesions dark skin'
+
+============================================================
+[*] Mot-clé : 'eczema erythema'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 54 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 54 URLs uniques (total brut: 54) [DDG:0, Bing:54, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 54 images (Threads: 15)...
+    Tél. eczema_erythema: 100%|█████████████████████████████████████| 54/54 [00:02<00:00, 23.37it/s]
+    [+] ✅ 48/54 nouvelles images uniques pour 'eczema erythema'
+
+============================================================
+[*] Mot-clé : 'eczema black skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 65 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 65 URLs uniques (total brut: 65) [DDG:0, Bing:65, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 65 images (Threads: 15)...
+    Tél. eczema_black_skin: 100%|███████████████████████████████████| 65/65 [00:01<00:00, 33.31it/s]
+    [+] ✅ 33/65 nouvelles images uniques pour 'eczema black skin'
+
+============================================================
+[*] Mot-clé : 'atopic dermatitis african skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 56 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 56 URLs uniques (total brut: 56) [DDG:0, Bing:56, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 56 images (Threads: 15)...
+    Tél. atopic_dermatitis_african_skin: 100%|██████████████████████| 56/56 [00:01<00:00, 45.61it/s]
+    [+] ✅ 23/56 nouvelles images uniques pour 'atopic dermatitis african skin'
+
+============================================================
+[*] Mot-clé : 'eczema madagascar'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 58 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 358 URLs uniques (total brut: 358) [DDG:300, Bing:58, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 358 images (Threads: 15)...
+    Tél. eczema_madagascar: 100%|█████████████████████████████████| 358/358 [00:11<00:00, 31.42it/s]
+    [+] ✅ 252/358 nouvelles images uniques pour 'eczema madagascar'
+
+============================================================
+[*] Mot-clé : 'dermatite atopique peau'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 54 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 54 URLs uniques (total brut: 54) [DDG:0, Bing:54, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 54 images (Threads: 15)...
+    Tél. dermatite_atopique_peau: 100%|█████████████████████████████| 54/54 [00:03<00:00, 16.19it/s]
+    [+] ✅ 47/54 nouvelles images uniques pour 'dermatite atopique peau'
+
+============================================================
+[*] Mot-clé : 'eczema clinical dermatology'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 55 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 55 URLs uniques (total brut: 55) [DDG:0, Bing:55, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 55 images (Threads: 15)...
+    Tél. eczema_clinical_dermatology: 100%|█████████████████████████| 55/55 [00:06<00:00,  9.10it/s]
+    [+] ✅ 45/55 nouvelles images uniques pour 'eczema clinical dermatology'
+
+============================================================
+[*] Mot-clé : 'eczema nummulaire photo'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 58 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 58 URLs uniques (total brut: 58) [DDG:0, Bing:58, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 58 images (Threads: 15)...
+    Tél. eczema_nummulaire_photo: 100%|█████████████████████████████| 58/58 [00:02<00:00, 23.90it/s]
+    [+] ✅ 52/58 nouvelles images uniques pour 'eczema nummulaire photo'
+
+    📊 Bilan Atopic dermatitis: 839 images uniques téléchargées
+
+############################################################
+🧬 MALADIE 9/9: Mpox / Monkeypox
+   Mots-clés : 9
+############################################################
+
+============================================================
+[*] Mot-clé : 'Mpox skin lesions'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 60 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 60 URLs uniques (total brut: 60) [DDG:0, Bing:60, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 60 images (Threads: 15)...
+    Tél. Mpox_skin_lesions: 100%|███████████████████████████████████| 60/60 [00:03<00:00, 16.33it/s]
+    [+] ✅ 47/60 nouvelles images uniques pour 'Mpox skin lesions'
+
+============================================================
+[*] Mot-clé : 'Monkeypox pustules'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 39 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 39 URLs uniques (total brut: 39) [DDG:0, Bing:39, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 39 images (Threads: 15)...
+    Tél. Monkeypox_pustules: 100%|██████████████████████████████████| 39/39 [00:10<00:00,  3.68it/s]
+    [+] ✅ 36/39 nouvelles images uniques pour 'Monkeypox pustules'
+
+============================================================
+[*] Mot-clé : 'monkeypox rash'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 37 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 37 URLs uniques (total brut: 37) [DDG:0, Bing:37, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 37 images (Threads: 15)...
+    Tél. monkeypox_rash: 100%|██████████████████████████████████████| 37/37 [00:02<00:00, 14.02it/s]
+    [+] ✅ 35/37 nouvelles images uniques pour 'monkeypox rash'
+
+============================================================
+[*] Mot-clé : 'Mpox dark skin'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 33 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 333 URLs uniques (total brut: 333) [DDG:300, Bing:33, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 333 images (Threads: 15)...
+    Tél. Mpox_dark_skin: 100%|████████████████████████████████████| 333/333 [00:19<00:00, 17.01it/s]
+    [+] ✅ 277/333 nouvelles images uniques pour 'Mpox dark skin'
+
+============================================================
+[*] Mot-clé : 'monkeypox african skin lesions'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 37 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 37 URLs uniques (total brut: 37) [DDG:0, Bing:37, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 37 images (Threads: 15)...
+    Tél. monkeypox_african_skin_lesions: 100%|██████████████████████| 37/37 [00:01<00:00, 28.67it/s]
+    [+] ✅ 24/37 nouvelles images uniques pour 'monkeypox african skin lesions'
+
+============================================================
+[*] Mot-clé : 'varioleun'ny rajako madagascar'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+✅ 300 URLs
+    [🔍] Bing... ✅ 36 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 336 URLs uniques (total brut: 336) [DDG:300, Bing:36, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 336 images (Threads: 15)...
+    Tél. varioleunny_rajako_madagascar: 100%|█████████████████████| 336/336 [00:16<00:00, 20.48it/s]
+    [+] ✅ 248/336 nouvelles images uniques pour 'varioleun'ny rajako madagascar'
+
+============================================================
+[*] Mot-clé : 'mpox eruption cutanee'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 53 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 53 URLs uniques (total brut: 53) [DDG:0, Bing:53, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 53 images (Threads: 15)...
+    Tél. mpox_eruption_cutanee: 100%|███████████████████████████████| 53/53 [00:02<00:00, 20.09it/s]
+    [+] ✅ 36/53 nouvelles images uniques pour 'mpox eruption cutanee'
+
+============================================================
+[*] Mot-clé : 'monkeypox vesicles clinical'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 44 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 44 URLs uniques (total brut: 44) [DDG:0, Bing:44, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 44 images (Threads: 15)...
+    Tél. monkeypox_vesicles_clinical: 100%|█████████████████████████| 44/44 [00:02<00:00, 14.74it/s]
+    [+] ✅ 33/44 nouvelles images uniques pour 'monkeypox vesicles clinical'
+
+============================================================
+[*] Mot-clé : 'mpox dermatology photo'
+============================================================
+    [🔍] DuckDuckGo... /content/CutisAI/scraper.py:91: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+⚠️ Bloqué (RateLimit)
+    [🔍] Bing... ✅ 64 URLs
+    [🔍] Google (udm=2)... ✅ 0 URLs
+    [🔍] Yahoo... ✅ 0 URLs
+    📊 Résumé : 64 URLs uniques (total brut: 64) [DDG:0, Bing:64, Google:0, Yahoo:0]
+    ⬇️  Téléchargement de 64 images (Threads: 15)...
+    Tél. mpox_dermatology_photo: 100%|██████████████████████████████| 64/64 [00:02<00:00, 24.44it/s]
+    [+] ✅ 46/64 nouvelles images uniques pour 'mpox dermatology photo'
+
+    📊 Bilan Mpox / Monkeypox: 782 images uniques téléchargées
+
+============================================================
+🎉 EXÉCUTION TERMINÉE !
+============================================================
+
+📊 STATISTIQUES GLOBALES:
+   Total URLs trouvées     : 9706
+   Total images téléchargées: 6518
+   Total hashes uniques    : 6516
+
+📊 PAR MALADIE:
+   Maladie                            URLs   Téléchargées
+   ----------------------------------------------------
+   Buruli Ulcer                        883            466
+   Leprosy                             816            506
+   Cutaneous Leishmaniasis             899            570
+   Yaws                               1319            868
+   Scabies                            1877           1294
+   Ringworm                            829            587
+   Tungiasis / Jigger fleas            962            606
+   Atopic dermatitis                  1118            839
+   Mpox / Monkeypox                   1003            782
+
+💾 Statistiques sauvées dans : /content/drive/MyDrive/Projet_Medical/Dataset_Images/scraping_stats.json
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+📁 Analyse de : /content/drive/MyDrive/Projet_Medical/Dataset_Images
+   9 classes détectées
+
+Classe                           Images   Doublons    Résolution moy.  Taille moy.
+------------------------------------------------------------------------------
+Scabies                            1531        118            716×587       181 KB
+Yaws                               1378        185            597×468       104 KB
+Atopic_dermatitis                  1321        148            862×648       170 KB
+Tungiasis_-_Jigger_fleas           1261        373            638×490       115 KB
+Leprosy                            1241        328            640×500       113 KB
+Mpox_-_Monkeypox                   1225         83            766×541       155 KB
+Ringworm                           1039        145            823×647       144 KB
+Buruli_Ulcer                        887        135            675×508       101 KB
+Cutaneous_Leishmaniasis             721         69            910×715       181 KB
+------------------------------------------------------------------------------
+TOTAL                             10604       1584
+
+📊 Distribution des classes :
+  Scabies                      ██████████████████████████████████████████████████ 1531
+  Yaws                         █████████████████████████████████████████████ 1378
+  Atopic_dermatitis            ███████████████████████████████████████████ 1321
+  Tungiasis_-_Jigger_fleas     █████████████████████████████████████████ 1261
+  Leprosy                      ████████████████████████████████████████ 1241
+  Mpox_-_Monkeypox             ████████████████████████████████████████ 1225
+  Ringworm                     █████████████████████████████████ 1039
+  Buruli_Ulcer                 ████████████████████████████ 887
+  Cutaneous_Leishmaniasis      ███████████████████████ 721
+
+⚠️  Alertes :
+  🟡 13 images dupliquées entre différentes classes
+
+✅ Analyse terminée. 10604 images, 9 classes.

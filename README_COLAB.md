@@ -35,20 +35,44 @@ Le scraper V2 utilise **4 moteurs** (DDG → Bing → Google → Yahoo) et dédu
 !python scraper.py --csv target_diseases.csv --out "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
 ```
 
-### Cellule 5 : Analyser le dataset collecté
+### Cellule 5 : Analyser le dataset (V2 brute)
 ```bash
 !python dataset_stats.py --input "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
 ```
 
 ---
 
-### 💡 Nouveautés V2 :
+## 🏥 Phase 3 : Intégration de Données Expertes (Optionnel)
+
+### Cellule 6 : Importer les Datasets Kaggle (Validé / Clean)
+Cette étape télécharge Mpox v2, Lèpre (plaies) et DermNet depuis Kaggle.
+*Nécessite d'uploader votre `kaggle.json` (dans `/root/.kaggle/`).*
+```python
+# Installation API Kaggle si besoin
+!pip install -q kaggle
+# Lancement de l'import automation
+!python import_kaggle.py
+```
+
+### Cellule 7 : Scraper Expert DermNet NZ
+Un scraper très ciblé qui récupère les images certifiées directement sur les rubriques spécialisées de DermNet NZ.
+```bash
+!python scraper_expert_dermnet.py
+```
+
+### Cellule 8 : Bilan Final (Expert + Scraped)
+Relancez les stats pour voir l'impact des données expertes sur votre dataset.
+```bash
+!python dataset_stats.py --input "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
+```
+
+---
+
+### 💡 Nouveautés V2 & Expert :
 - **4 moteurs de recherche** : DuckDuckGo, Bing, Google (`udm=2`), Yahoo
-- **Déduplication SHA256** : élimine les doublons même avec des URLs différentes
-- **Filtrage qualité** : taille min 5 KB, résolution min 100×100 px
-- **Mots-clés enrichis** : français + termes médicaux spécialisés (9-12 par maladie)
-- **Statistiques JSON** : fichier `scraping_stats.json` généré automatiquement
-- **Résilience** : si Colab plante, relancer — le script ne retélécharge pas les images existantes
+- **Expert Datasets** : Intégration automatisée de Mpox v2.0, Leprosy Chronic Wounds, Scabies (Kaggle).
+- **DermNet Expert Scraper** : Récupération ciblée sur un site de référence dermatologique.
+- **Identification** : Les images expertes sont préfixées `EXPERT_KAG_` ou `EXPERT_DERMNET_`.
 
 ### ⚠️ Notes importantes :
 - Le scraper V2 interroge les **4 moteurs pour chaque mot-clé** (plus d'images mais plus lent)
