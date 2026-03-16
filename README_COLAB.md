@@ -46,11 +46,23 @@ Le scraper V2 utilise **4 moteurs** (DDG → Bing → Google → Yahoo) et dédu
 
 ### Cellule 6 : Importer les Datasets Kaggle (Validé / Clean)
 Cette étape télécharge Mpox v2, Lèpre (plaies) et DermNet depuis Kaggle.
-*Nécessite d'uploader votre `kaggle.json` (dans `/root/.kaggle/`).*
 ```python
-# Installation API Kaggle si besoin
+import os
+from google.colab import files
+
+# 1. Upload du kaggle.json
+if not os.path.exists("/root/.kaggle/kaggle.json"):
+    print("📥 Veuillez uploader votre fichier kaggle.json :")
+    uploaded = files.upload()
+    if "kaggle.json" in uploaded:
+        os.makedirs("/root/.kaggle", exist_ok=True)
+        with open("/root/.kaggle/kaggle.json", "wb") as f:
+            f.write(uploaded["kaggle.json"])
+        os.chmod("/root/.kaggle/kaggle.json", 0o600)
+        print("✅ kaggle.json configuré.")
+
+# 2. Installation de l'API et import
 !pip install -q kaggle
-# Lancement de l'import automation
 !python import_kaggle.py
 ```
 
