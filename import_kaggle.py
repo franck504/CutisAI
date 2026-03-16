@@ -11,9 +11,9 @@ from pathlib import Path
 # Slug -> Destination mapping
 KAGGLE_DATASETS = {
     "joydippaul/mpox-skin-lesion-dataset-version-20-msld-v20": "Mpox_-_Monkeypox",
-    "manthanshah12/leprosy-chronic-wound-images-co2wounds-v2": "Leprosy",
-    "garciaespinoza/skin-disease-raw-dataset": "Scabies",
-    "shubhamgoel/dermnet": "General_Derm"  # Sera dispatché plus tard si possible
+    "orvile/leprosy-chronic-wound-images-co2wounds-v2": "Leprosy",
+    "devdope/skin-disease-raw-dataset": "Scabies",
+    "shubhamgoel27/dermnet": "General_Derm"
 }
 
 # Dossier final sur le Drive (à adapter dans Colab)
