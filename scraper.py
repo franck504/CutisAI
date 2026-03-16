@@ -124,39 +124,20 @@ def scrape_keyword(keyword, disease_name, output_dir):
     
     try:
         urls = []
-        # Choix entre 4 moteurs pour diluer complètement le ratelimit
-        engines = ["ddg", "bing", "yahoo", "google"]
-        engine = random.choice(engines)
+        # On force l'utilisation de Bing, qui est le seul moteur qui ne limite pas drastiquement les IPs Datacenter (Colab/Cloud)
+        engine = "bing"
         print(f"    [🔍] Moteur principal choisi : {engine.upper()}")
         
         # Boucle de retry pour gérer le Ratelimit ou blocages
-        for attempt in range(5):
+        for attempt in range(3):
             try:
-                if engine == "ddg":
-                    urls = search_duckduckgo(keyword, MAX_IMAGES_PER_KEYWORD)
-                elif engine == "bing":
-                    urls = search_bing(keyword, MAX_IMAGES_PER_KEYWORD)
-                elif engine == "yahoo":
-                    urls = search_yahoo(keyword, MAX_IMAGES_PER_KEYWORD)
-                else:
-                    urls = search_google(keyword, MAX_IMAGES_PER_KEYWORD)
-                
+                urls = search_bing(keyword, MAX_IMAGES_PER_KEYWORD)
                 if urls:
                     break # On sort de la boucle si succès
             except Exception as e:
-                is_timeout = "timeout" in str(e).lower()
-                if "403" in str(e) or "ratelimit" in str(e).lower() or "429" in str(e) or attempt < 4 or is_timeout:
-                    wait_time = (attempt + 1) * 5 + random.randint(3, 7)
-                    
-                    # Bascule immédiate vers un autre moteur
-                    engines.remove(engine)
-                    if not engines: engines = ["ddg", "bing", "yahoo", "google"] # reset
-                    engine = random.choice(engines)
-                    
-                    print(f"    [!] Erreur. Pause {wait_time}s... Bascule sur {engine.upper()} (Tentative {attempt+2}/5)")
-                    time.sleep(wait_time)
-                else:
-                    raise e
+                wait_time = (attempt + 1) * 5
+                print(f"    [!] Erreur. Pause {wait_time}s... (Tentative {attempt+2}/3)")
+                time.sleep(wait_time)
             
         if not urls:
             print(f"[-] Aucune image trouvée pour '{keyword}'.")
