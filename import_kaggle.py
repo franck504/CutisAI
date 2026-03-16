@@ -20,12 +20,28 @@ KAGGLE_DATASETS = {
 DRIVE_BASE_DIR = "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
 
 def setup_kaggle():
-    """Vérifie et configure l'API Kaggle."""
-    kaggle_json = Path("/root/.kaggle/kaggle.json")
+    """Vérifie et configure l'API Kaggle. Propose l'upload si sur Colab."""
+    kaggle_dir = Path("/root/.kaggle")
+    kaggle_json = kaggle_dir / "kaggle.json"
+    
     if not kaggle_json.exists():
         print("⚠️  Fichier kaggle.json non trouvé dans /root/.kaggle/")
-        print("Veuillez uploader votre kaggle.json ou l'instancier manuellement.")
-        return False
+        
+        # Tentative d'upload automatique si on est sur Google Colab
+        try:
+            from google.colab import files
+            print("📥 Environnement Colab détecté. Veuillez sélectionner votre fichier kaggle.json :")
+            uploaded = files.upload()
+            if "kaggle.json" in uploaded:
+                kaggle_dir.mkdir(parents=True, exist_ok=True)
+                with open(kaggle_json, "wb") as f:
+                    f.write(uploaded["kaggle.json"])
+            else:
+                print("❌ Fichier incorrect. L'import sera impossible.")
+                return False
+        except ImportError:
+            print("Veuillez uploader votre kaggle.json manuellement dans /root/.kaggle/")
+            return False
     
     os.system("chmod 600 /root/.kaggle/kaggle.json")
     try:
