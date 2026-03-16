@@ -66,20 +66,29 @@ def move_and_prefix(src_dir, disease_folder, prefix="EXPERT_KAG_"):
     image_extensions = {'.jpg', '.jpeg', '.png', '.webp', '.bmp'}
     count = 0
     
-    for path in src_dir.rglob('*'):
-        if path.suffix.lower() in image_extensions:
-            # Générer un nom unique court
-            with open(path, 'rb') as f:
-                h = hashlib.md5(f.read()).hexdigest()[:8]
-            
-            new_name = f"{prefix}{disease_folder}_{h}{path.suffix}"
-            final_path = dest_dir / new_name
-            
-            if not final_path.exists():
-                shutil.move(str(path), str(final_path))
-                count += 1
+    # Récupérer la liste des fichiers pour calculer le total
+    files_to_move = [p for p in src_dir.rglob('*') if p.suffix.lower() in image_extensions]
+    total = len(files_to_move)
+    
+    print(f"📦 Traitement de {total} images expertes pour {disease_folder}...")
+    
+    for i, path in enumerate(files_to_move):
+        # Générer un nom unique court
+        with open(path, 'rb') as f:
+            h = hashlib.md5(f.read()).hexdigest()[:8]
+        
+        new_name = f"{prefix}{disease_folder}_{h}{path.suffix}"
+        final_path = dest_dir / new_name
+        
+        if not final_path.exists():
+            shutil.move(str(path), str(final_path))
+            count += 1
+        
+        # Log de progression tous les 50 fichiers
+        if (i + 1) % 50 == 0 or (i + 1) == total:
+            print(f"  ➡️  Progression : {i+1}/{total} images traitées...")
                 
-    print(f"✅ {count} images expertes ajoutées à {disease_folder}")
+    print(f"✅ Terminé : {count} nouvelles images expertes ajoutées à {disease_folder}")
 
 def main():
     print("🚀 AUTOMATION KAGGLE EXPERT DATASETS")
