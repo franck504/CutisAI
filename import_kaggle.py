@@ -16,8 +16,8 @@ KAGGLE_DATASETS = {
     "shubhamgoel27/dermnet": "General_Derm"
 }
 
-# Dossier final sur le Drive (à adapter dans Colab)
-DRIVE_BASE_DIR = "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
+# Dossier final sur le Drive (V2 - EXPERT ONLY)
+DRIVE_BASE_DIR = "/content/drive/MyDrive/Projet_Medical/Dataset_Expert_V2"
 
 def setup_kaggle():
     """Vérifie et configure l'API Kaggle (via fichier ou variables d'env)."""

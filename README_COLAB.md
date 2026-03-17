@@ -21,30 +21,18 @@ drive.mount('/content/drive')
 !pip install -q duckduckgo_search pandas requests Pillow tqdm
 ```
 
-### Cellule 3 : Créer le dossier de destination sur Drive
+### Cellule 3 : Créer le dossier V2 sur Drive (Expert Only)
 ```python
 import os
-output_dir = "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
+output_dir = "/content/drive/MyDrive/Projet_Medical/Dataset_Expert_V2"
 os.makedirs(output_dir, exist_ok=True)
-print(f"✅ Dossier prêt : {output_dir}")
-```
-
-### Cellule 4 : Lancer le Scraper V2
-Le scraper V2 utilise **4 moteurs** (DDG → Bing → Google → Yahoo) et déduplique par SHA256.
-```bash
-!python scraper.py --csv target_diseases.csv --out "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
-```
-
-### Cellule 5 : Analyser le dataset (V2 brute)
-```bash
-!python dataset_stats.py --input "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
+print(f"✅ Dossier V2 prêt : {output_dir}")
 ```
 
 ---
 
-## 🏥 Phase 3 : Intégration de Données Expertes (Optionnel)
-
-## 🏥 Phase 3 : Intégration de Données Expertes (Optionnel)
+## 💎 Phase 4 : Dataset Expert-Only V2 (Qualité Maximale)
+Cette phase permet de constituer un dataset 100% certifié en ignorant le scraping web bruyant.
 
 ### 🗝️ Comment obtenir votre `kaggle.json` ?
 1. Allez sur [Kaggle.com](https://www.kaggle.com/) et connectez-vous.
@@ -93,21 +81,20 @@ Un scraper très ciblé qui récupère les images certifiées directement sur le
 !python scraper_expert_dermnet.py
 ```
 
-### Cellule 8 : Bilan Final (Expert + Scraped)
-Relancez les stats pour voir l'impact des données expertes sur votre dataset.
+### Cellule 8 : Bilan Final (Dataset V2 Expert)
+Vérifiez que vos ~56 000 images sont bien présentes et classées.
 ```bash
-!python dataset_stats.py --input "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
+!python dataset_stats.py --input "/content/drive/MyDrive/Projet_Medical/Dataset_Expert_V2"
 ```
 
 ---
 
-### 💡 Nouveautés V2 & Expert :
-- **4 moteurs de recherche** : DuckDuckGo, Bing, Google (`udm=2`), Yahoo
-- **Expert Datasets** : Intégration automatisée de Mpox v2.0, Leprosy Chronic Wounds, Scabies (Kaggle).
-- **DermNet Expert Scraper** : Récupération ciblée sur un site de référence dermatologique.
-- **Identification** : Les images expertes sont préfixées `EXPERT_KAG_` ou `EXPERT_DERMNET_`.
+### 💡 Nouveautés V2 Expert Only :
+- **Pureté des données** : 0% de scraping web "sauvage", 100% de sources médicales/expertes.
+- **Kaggle Datasets** : Mpox v2.0, Leprosy Chronic Wounds, Scabies, DermNet (General).
+- **DermNet Expert Scraper** : Récupération ciblée sur un site de référence.
+- **Identification** : Préfixes `EXPERT_KAG_` et `EXPERT_DERMNET_` pour la traçabilité.
 
 ### ⚠️ Notes importantes :
-- Le scraper V2 interroge les **4 moteurs pour chaque mot-clé** (plus d'images mais plus lent)
-- Temps estimé : **30-45 minutes** (vs 15-20 min en V1)
-- Les images de la V1 déjà sur Drive **ne seront pas re-téléchargées** (reprise automatique)
+- Le dossier utilisé est désormais `/Dataset_Expert_V2`.
+- Les images scrapées précédemment ne sont pas incluses dans ce nouveau stock.

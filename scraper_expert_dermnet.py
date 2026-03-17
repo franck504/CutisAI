@@ -26,7 +26,7 @@ DERMNET_MAPPING = {
 
 BASE_URL = "https://dermnetnz.org/topics/"
 DEFAULT_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-DRIVE_BASE_DIR = "/content/drive/MyDrive/Projet_Medical/Dataset_Images"
+DRIVE_BASE_DIR = "/content/drive/MyDrive/Projet_Medical/Dataset_Expert_V2"
 TIMEOUT = 10
 
 def get_image_urls(slug):
@@ -76,7 +76,7 @@ def download_expert_img(url, disease_folder):
         if ext not in ['jpg', 'jpeg', 'png', 'webp']:
             ext = 'jpg'
             
-        filename = f"EXPERT_DERMNET_{h}.{ext}"
+        filename = f"EXPERT_DERMNET_{disease_folder}_{h}.{ext}"
         path = os.path.join(dest_dir, filename)
         
         if not os.path.exists(path):
