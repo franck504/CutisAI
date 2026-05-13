@@ -11,7 +11,7 @@ from concurrent.futures import ThreadPoolExecutor
 # ==========================================
 # CONFIGURATION
 # ==========================================
-# Notre mapping Maladie -> Slugs DermNet NZ
+# Correspondance entre nos noms de maladies et les slugs utilisés par DermNet NZ
 DERMNET_MAPPING = {
     "Buruli_Ulcer": ["buruli-ulcer"],
     "Leprosy": ["leprosy"],
@@ -26,11 +26,15 @@ DERMNET_MAPPING = {
 
 BASE_URL = "https://dermnetnz.org/topics/"
 DEFAULT_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-DRIVE_BASE_DIR = "/content/drive/MyDrive/Projet_Medical/Dataset_Expert_V2"
+# Dossier de destination (adapté pour un usage sur Google Colab ou local)
+DRIVE_BASE_DIR = "./dataset_expert_v2"
 TIMEOUT = 10
 
 def get_image_urls(slug):
-    """Extrait les URLs des images d'une page topic DermNet NZ."""
+    """
+    Analyse la page d'un sujet sur DermNet NZ pour en extraire les URLs des images.
+    On recherche spécifiquement les balises img exploitables.
+    """
     url = urljoin(BASE_URL, slug)
     headers = {"User-Agent": DEFAULT_UA}
     urls = []
@@ -40,8 +44,7 @@ def get_image_urls(slug):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Chercher dans les carrousels et les balises img
-        # DermNet utilise souvent des balises <picture> ou des <img> avec data-src
+        # Extraction des sources d'images (src ou data-src)
         for img in soup.find_all('img'):
             src = img.get('src') or img.get('data-src') or img.get('data-srcset')
             if src and not src.startswith('data:') and any(x in src.lower() for x in ['.jpg', '.jpeg', '.png']):
@@ -50,17 +53,20 @@ def get_image_urls(slug):
                 elif src.startswith('/'):
                     src = urljoin("https://dermnetnz.org", src)
                 
-                # Filtrer les icônes et logos
+                # On écarte les éléments d'interface (logos, icônes)
                 if "logo" not in src.lower() and "icon" not in src.lower() and "adrit" not in src.lower():
                     urls.append(src)
         
         return list(dict.fromkeys(urls))
     except Exception as e:
-        print(f"❌ Erreur sur {slug}: {e}")
+        print(f"Erreur lors du scan du sujet {slug} : {e}")
         return []
 
 def download_expert_img(url, disease_folder):
-    """Télécharge une image experte avec préfixe."""
+    """
+    Télécharge une image 'experte' et la sauvegarde dans le dossier approprié.
+    Le nom du fichier inclut un préfixe spécifique pour l'identification.
+    """
     dest_dir = os.path.join(DRIVE_BASE_DIR, disease_folder)
     os.makedirs(dest_dir, exist_ok=True)
     
@@ -70,7 +76,7 @@ def download_expert_img(url, disease_folder):
         response.raise_for_status()
         content = response.content
         
-        # Hash pour unicité
+        # Génération d'un identifiant court basé sur le contenu pour l'unicité
         h = hashlib.md5(content).hexdigest()[:8]
         ext = url.split('.')[-1].split('?')[0].lower()
         if ext not in ['jpg', 'jpeg', 'png', 'webp']:
@@ -88,20 +94,23 @@ def download_expert_img(url, disease_folder):
     return False
 
 def scrape_disease(disease, slugs):
-    """Gère le scraping d'une maladie (plusieurs slugs possibles)."""
+    """
+    Gère le processus complet pour une maladie donnée, pouvant couvrir plusieurs sujets.
+    """
     all_urls = []
     for slug in slugs:
-        print(f"  🔍 Scan topic: {slug}...", end=" ", flush=True)
+        print(f"  Scan du sujet : {slug}...", end=" ", flush=True)
         found = get_image_urls(slug)
-        print(f"✅ {len(found)} images")
+        print(f"Succès : {len(found)} images trouvées")
         all_urls.extend(found)
-        time.sleep(random.uniform(1, 4)) # Politesse
+        # Pause de courtoisie pour le serveur
+        time.sleep(random.uniform(1, 4))
         
     all_urls = list(dict.fromkeys(all_urls))
     if not all_urls:
         return 0
     
-    print(f"  ⬇️  Téléchargement de {len(all_urls)} images expertes pour {disease}...")
+    print(f"  Téléchargement de {len(all_urls)} images expertes pour {disease}...")
     count = 0
     with ThreadPoolExecutor(max_workers=5) as executor:
         results = [executor.submit(download_expert_img, url, disease) for url in all_urls]
@@ -112,17 +121,19 @@ def scrape_disease(disease, slugs):
 
 def main():
     print("="*60)
-    print("🏥 SCRAPER EXPERT DERMNET NZ")
+    print("DÉMARRAGE DU SCRAPER EXPERT DERMNET NZ")
     print("="*60)
     
     total = 0
     for disease, slugs in DERMNET_MAPPING.items():
-        print(f"\n🧬 Maladie : {disease}")
+        print(f"\nTraitement de la maladie : {disease}")
         count = scrape_disease(disease, slugs)
-        print(f"✅ {count} nouvelles images expertes ajoutées.")
+        print(f"Bilan : {count} nouvelles images expertes ajoutées.")
         total += count
         
-    print(f"\n🎉 TERMINÉ. Total images expertes : {total}")
+    print(f"\nExécution terminée. Total d'images expertes récupérées : {total}")
 
 if __name__ == "__main__":
+    # On s'assure que le dossier de base existe
+    os.makedirs(DRIVE_BASE_DIR, exist_ok=True)
     main()
